@@ -1,0 +1,6 @@
+extends layout
+block content
+ h1=title
+  
+  p Your shortened url is:
+   a(href=url.short_url target='_blank') #{url.short_url_code}

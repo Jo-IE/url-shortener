@@ -1,0 +1,14 @@
+extends layout
+block content
+ h1=title
+ 
+ form(method='POST' action='')
+    div.form-group
+      label(for='url') Url:
+      input#first_name.form-control(type='text' placeholder='Enter URL' name='url' required='true' value=(undefined===url ? '' : url.url_name) )
+    button.btn.btn-primary(type='submit') Submit
+    
+ if errors
+  ul
+   for error in errors
+    li!=error.msg
